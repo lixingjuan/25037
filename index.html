@@ -44,7 +44,7 @@
         //循环给src赋值 ..images/+ '一个循环生成的数num'+"num.jpg"
 
         for (let i = 0; i < 20; i++) {
-            let newSrc = "../images/" + i +"/"+i+".jpg";
+            let newSrc = "./images/" + i +"/"+i+".jpg";
             let newDiv = "<div class='box'><img src=" + newSrc + "></div>"
             $("#masonry").append(newDiv)
         }
