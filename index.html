@@ -5,30 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery-1.10.2.min.js"></script>    
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <style>
         .container-fluid {
             padding: 20px;
         }
-
         .box {
             margin-bottom: 20px;
             float: left;
             width: 220px;
         }
-
         .box img {
             max-width: 100%
         }
     </style>
 </head>
-
 <body>
-
-    <div>李幸娟的作业</div>
     <div id="masonry" class="container-fluid">
-        <div class="box"><img src="/25037/images"></div>
+        <!-- <div class="box"><img src="/25037/images"></div> -->
     </div>
     <script>
         $(function () {
@@ -42,7 +37,6 @@
             });
         });
         //循环给src赋值 ..images/+ '一个循环生成的数num'+"num.jpg"
-
         for (let i = 1; i < 101; i++) {
             let newSrc = "/25037/images/" + i +"/"+i+".jpg";
             let newDiv = "<div class='box'><img src=" + newSrc + "></div>"

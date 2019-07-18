@@ -38,18 +38,14 @@ let getAllimgData = new Promise((resolve, reject) => {
     resolve()
 }).then(() => {
     // 读取json文件
-    
     let dataArr = JSON.parse(dataJson)
+    // 标记图片数量
     let markNumber = 0
     saveImage(dataArr, markNumber);
 }, () => {
     console.log("出错了")
 })
 
-// 获取要爬取的url们
-let getUrls = ()=>{
-    
-}
 // 从dataJson文件里面读取数据，然后保存图片
 let saveImage = (dataArr, markNumber) => {
     let markNumberArr = []
@@ -94,7 +90,7 @@ let saveImage = (dataArr, markNumber) => {
         return markNumber;
     })
     markNumber = markNumber + 1;
-    if (markNumber === 5) {
+    if (markNumber === 100) {
         console.log(markNumberArr)
         return;
     }
