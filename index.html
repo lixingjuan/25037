@@ -1,32 +1,29 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.bootcss.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.imagesloaded/4.1.4/imagesloaded.min.js"></script>
     <style>
-        .container-fluid {
-            padding: 20px;
-        }
-        .box {
-            margin-bottom: 20px;
-            float: left;
-            width: 220px;
-        }
-        .box img {
-            max-width: 100%
-        }
+        *{margin:0px;padding:0px;}    
+        .container-fluid {padding: 20px; width:80%;margin:0 auto;}
+        .box {width: 220px;height:200px;margin:20px 20px;float: left;}
+        .box img {max-width: 100%}
+        nav{width:100%;height:200px;margin:0 auto;background-color: darkgreen;}
     </style>
 </head>
 <body>
+    <nav>李幸娟的作业<i>工号：25037</i></nav>
     <div id="masonry" class="container-fluid">
-        <!-- <div class="box"><img src="/25037/images"></div> -->
+        
     </div>
     <script>
-        $(function () {
+    // <!-- <div class="box"><img src="./images/1/1.jpg">test</div>-->
+        // const fs = require('fs');
+    $(function () {
             var $container = $('#masonry');
             $container.imagesLoaded(function () {
                 $container.masonry({
@@ -39,10 +36,27 @@
         //循环给src赋值 ..images/+ '一个循环生成的数num'+"num.jpg"
         for (let i = 1; i < 101; i++) {
             let newSrc = "/25037/images/" + i +"/"+i+".jpg";
+            url = "./images/" + i +"/"+"alt.txt"
+
+            // let newtext = readFileText(url);<i>"+newtext+"</i>
+            // console.log(newtext())
             let newDiv = "<div class='box'><img src=" + newSrc + "></div>"
             $("#masonry").append(newDiv)
         }
+        // 读取图片描述文本(参数分别是描述文本的路径)     
+        // function readFileText(url) {
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open("get", url, true);
+        //     let a = xhr.onreadystatechange = function() {
+                
+        //     };
+        //     // console.log(xhr.onreadystatechange())
+        //     return a
+        // }
         
+        // document.getElementById("aa").innerHTML=s; 
+                // console.log(s)
+        // readFileText('./images/1/alt.txt')
     </script>
 </body>
 
