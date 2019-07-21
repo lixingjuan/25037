@@ -97,15 +97,3 @@ let saveImage = (dataArr, markNumber) => {
     saveImage(dataArr, markNumber)
 }
 
-// // // 服务器监听3000端口
-// let server = app.listen(3000, function () {
-//     let host = server.address().address;
-//     let port = server.address().port;
-//     console.log('Your App is running at http://%s:%s', host, port);
-// });
-
-// app.get('/', async (req, res, next) => {
-//     res.send({
-//         dataJson,
-//     });
-// });
